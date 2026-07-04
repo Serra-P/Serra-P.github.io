@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Igor Potard | Portfolio C++, GPU, rendu et imagerie</title>
+    <meta
+      name="description"
+      content="Portfolio d'Igor Potard, ingénieur logiciel junior spécialisé en C++, GPU, OpenGL, CUDA, rendu 3D, simulation et imagerie médicale."
+    />
+    <meta name="theme-color" content="#08111f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Igor Potard | Portfolio C++, GPU, rendu et imagerie" />
+    <meta
+      property="og:description"
+      content="Projets C++, CUDA, OpenGL, WebGL, simulation, traitement image/vidéo et prototypage R&D."
+    />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/webgl.js" defer></script>
+  </head>
+  <body>
+    <canvas id="page-webgl" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+    <header class="site-header" aria-label="Navigation principale">
+      <nav class="nav shell">
+        <a class="brand" href="#hero" aria-label="Retour en haut de page">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="./assets/img/igor_potard_acu.jpg" alt="" width="42" height="42" decoding="async" />
+          </span>
+          <span class="brand-name">Igor Potard</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="sr-only">Ouvrir le menu</span>
+        </button>
+
+        <ul class="nav-links" id="site-nav">
+          <li><a href="#about">Profil</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#labs">Labs</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-anchor" id="hero" aria-labelledby="hero-title">
+        <canvas id="hero-webgl" aria-hidden="true"></canvas>
+        <div class="hero-fallback" aria-hidden="true"></div>
+
+        <div class="hero-inner shell">
+          <div class="hero-copy">
+            <p class="hero-badge">C++ · GPU · Rendu · Simulation · Imagerie</p>
+            <h1 id="hero-title">Igor Potard</h1>
+            <p class="hero-role">
+              Ingénieur logiciel junior orienté imagerie médicale, rendu 3D et interactions graphiques.
+            </p>
+            <p class="hero-summary">
+              Étudiant à l'EPITA, je conçois des prototypes R&amp;D, des pipelines C++/CUDA,
+              des expériences OpenGL/WebGL et des outils web où l'usage, la performance et la
+              précision restent centraux.
+            </p>
+
+            <div class="hero-actions" aria-label="Actions principales">
+              <a class="button button-primary" href="#projects">Voir les projets</a>
+              <a class="button button-secondary" href="./assets/cv/cv_igor_potard_fr.pdf" download>
+                Télécharger le CV
+              </a>
+              <a class="button button-ghost" href="https://github.com/Serra-P">GitHub</a>
+              <a class="button button-ghost" href="mailto:igor.potard@gmail.com">Contact</a>
+            </div>
+
+            <div class="hero-tags" aria-label="Domaines forts">
+              <span>C++ moderne</span>
+              <span>CUDA / GPGPU</span>
+              <span>OpenGL / WebGL</span>
+              <span>Traitement image</span>
+            </div>
+          </div>
+
+          <aside class="profile-card" aria-label="Résumé profil">
+            <div class="profile-photo-frame">
+              <img
+                class="profile-photo"
+                src="./assets/img/igor_potard_acu.jpg"
+                alt="Portrait professionnel d'Igor Potard"
+                width="200"
+                height="200"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </div>
+            <div class="profile-card-body">
+              <p class="profile-kicker">Disponible pour échanges techniques</p>
+              <h2>Logiciel, image et rendu</h2>
+              <p>
+                Profil junior avec une base solide en C++, graphique temps réel, calcul GPU,
+                traitement d'image et prototypage produit.
+              </p>
+            </div>
+            <dl class="profile-facts">
+              <div>
+                <dt>Base</dt>
+                <dd>Paris</dd>
+              </div>
+              <div>
+                <dt>Formation</dt>
+                <dd>EPITA 2026</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Image &amp; GPU</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="about" aria-labelledby="about-title">
+        <div class="shell section-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Profil</p>
+            <h2 id="about-title">Un développeur logiciel avec un ancrage image, rendu et R&amp;D.</h2>
+          </div>
+
+          <div class="section-content about-content">
+            <div class="about-text">
+              <p>
+                Spécialisé en traitement d'image, synthèse d'image et simulation graphique, j'ai une
+                expérience R&amp;D chez GE HealthCare sur des preuves de concept visant à rendre les
+                interactions d'un viewer médical plus rapides, plus intelligentes et plus efficaces
+                pour les radiologues.
+              </p>
+              <p>
+                Mes projets personnels et académiques couvrent le C++ moderne, OpenGL, CUDA, le
+                traitement vidéo/image, les compilateurs expérimentaux, les outils TypeScript et les
+                notebooks de data ou d'imagerie. L'objectif récurrent : transformer des sujets
+                techniques complexes en logiciels utilisables, mesurables et démontrables.
+              </p>
+            </div>
+
+            <div class="focus-grid" aria-label="Forces principales">
+              <article class="mini-card">
+                <span>01</span>
+                <h3>Rendu &amp; 3D</h3>
+                <p>OpenGL, GLSL, raytracing, génération procédurale et scènes temps réel.</p>
+              </article>
+              <article class="mini-card">
+                <span>02</span>
+                <h3>GPU &amp; image</h3>
+                <p>CUDA, filtres, primitives parallèles, vidéo et traitements bas niveau.</p>
+              </article>
+              <article class="mini-card">
+                <span>03</span>
+                <h3>Outils logiciels</h3>
+                <p>Interfaces TypeScript, Canvas, tests, intégration et prototypage R&amp;D.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted section-anchor" id="skills" aria-labelledby="skills-title">
+        <div class="shell">
+          <div class="section-heading section-heading-wide">
+            <p class="eyebrow">Compétences</p>
+            <h2 id="skills-title">Stack technique structurée pour un recruteur.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="card reveal">
+              <h3>Langages</h3>
+              <p>C++, C, Python, Java, C#, TypeScript, JavaScript, CUDA, SQL, Bash, OCaml, Lisp.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Graphique / rendu / 3D</h3>
+              <p>OpenGL, WebGL, GLSL, Canvas 2D, raytracing, rendu temps réel, génération procédurale.</p>
+            </article>
+            <article class="card reveal">
+              <h3>GPU / calcul parallèle</h3>
+              <p>CUDA, kernels, réduction, scan, histogrammes, optimisation et analyse de performance.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Image / vidéo</h3>
+              <p>Traitement d'image, filtrage, YUV/RGB, désentrelacement, simulation et notebooks d'imagerie.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Web / outils</h3>
+              <p>React, Vite, Node.js, HTML/CSS, APIs, Docker, AWS, Git, Linux, GitLab CI/CD.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Méthodes</h3>
+              <p>Prototypage R&amp;D, architecture MVC, tests, revue de code, pédagogie et analyse de données.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="projects" aria-labelledby="projects-title">
+        <div class="shell">
+          <div class="section-heading section-heading-wide">
+            <p class="eyebrow">Projets mis en avant</p>
+            <h2 id="projects-title">Une sélection courte, lisible et orientée compétences.</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card project-card-feature reveal">
+              <figure class="project-media">
+                <img
+                  src="./assets/img/projects/procedural-terrain-card.jpg"
+                  alt="Terrain procédural OpenGL avec reliefs et lacs"
+                  width="1280"
+                  height="720"
+                  loading="eager"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="status status-public">Public</span>
+                  <span>Graphics &amp; Rendering</span>
+                </div>
+                <h3>Générateur de terrain procédural OpenGL</h3>
+                <div class="project-tags">
+                  <span>C++</span><span>OpenGL 4.3</span><span>GLSL</span><span>CMake</span>
+                </div>
+                <p>
+                  Terrain généré par compute shader avec bruit fractal, masques de lacs et montagnes,
+                  geometry shaders pour les détails et post-processing stylisé.
+                </p>
+                <ul>
+                  <li>Pipeline compute, vertex, geometry, fragment et post-process.</li>
+                  <li>Heightmap, LOD local et paramètres ajustables.</li>
+                </ul>
+                <a class="text-link" href="https://github.com/Serra-P/Procedural_Generation_OpenGl">
+                  Voir le dépôt GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="status status-public">Public</span>
+                  <span>Web Tool</span>
+                </div>
+                <h3>Infinite Canvas Editor</h3>
+                <div class="project-tags">
+                  <span>TypeScript</span><span>React</span><span>Canvas 2D</span><span>Jest</span>
+                </div>
+                <p>
+                  Éditeur visuel web avec pan, zoom, rotation, création d'objets, sélection,
+                  animation et suppression clavier.
+                </p>
+                <ul>
+                  <li>Architecture séparée entre caméra, rendu, objets et sélection.</li>
+                  <li>Tests sur les briques centrales de l'éditeur.</li>
+                </ul>
+                <a class="text-link" href="https://github.com/Serra-P/Infinite_Canvas_Editor">
+                  Voir le dépôt GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="status status-public">Public</span>
+                  <span>GPU / CUDA</span>
+                </div>
+                <h3>Traitement d'images CUDA</h3>
+                <div class="project-tags">
+                  <span>CUDA</span><span>C++</span><span>CMake</span>
+                </div>
+                <p>
+                  Filtres GPU appliqués à l'image : flou gaussien, NLMeans, flou sélectif et
+                  expérimentations de détection de mouvement.
+                </p>
+                <ul>
+                  <li>Kernels CUDA organisés dans un projet CMake.</li>
+                  <li>Base concrète pour discuter performance GPU.</li>
+                </ul>
+                <a class="text-link" href="https://github.com/Serra-P/cuda_img_filter">
+                  Voir le dépôt GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="status status-public">Public</span>
+                  <span>Raytracing</span>
+                </div>
+                <h3>Raytracer C++</h3>
+                <div class="project-tags">
+                  <span>C++</span><span>Raytracing</span><span>CMake</span>
+                </div>
+                <p>
+                  Moteur de rendu hors-ligne avec scènes, caméra, lumières, sphères, textures et
+                  vecteurs 3D.
+                </p>
+                <ul>
+                  <li>Modélisation des primitives et matériaux.</li>
+                  <li>Architecture C++ découpée par composants de rendu.</li>
+                </ul>
+                <a class="text-link" href="https://github.com/Serra-P/Raytracer_cpp">
+                  Voir le dépôt GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="status status-public">Public</span>
+                  <span>Simulation</span>
+                </div>
+                <h3>Simulation de fluides C++</h3>
+                <div class="project-tags">
+                  <span>C++</span><span>Simulation</span><span>Rendu</span>
+                </div>
+                <p>
+                  Simulation physique avec grille décalée, particules, caméra, lumières et pipeline
+                  de rendu réutilisant des briques de raytracing.
+                </p>
+                <ul>
+                  <li>Structures numériques dédiées à la simulation.</li>
+                  <li>Projet modulaire avec scène, moteur et objets.</li>
+                </ul>
+                <a class="text-link" href="https://github.com/Serra-P/Fluid_Simulation_cpp">
+                  Voir le dépôt GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <figure class="project-media project-media-small">
+                <img
+                  src="./assets/img/projects/subway-cuber-train-card.jpg"
+                  alt="Texture de train issue du projet Subway-Cuber"
+                  width="900"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="status status-public">Public</span>
+                  <span>OpenGL Game</span>
+                </div>
+                <h3>Subway-Cuber</h3>
+                <div class="project-tags">
+                  <span>C++</span><span>OpenGL</span><span>GLSL</span>
+                </div>
+                <p>Jeu 3D type endless runner avec environnement, obstacles, assets et shaders dédiés.</p>
+                <ul>
+                  <li>Scène 3D interactive et boucle de rendu temps réel.</li>
+                  <li>Projet visuel démontrant OpenGL appliqué au jeu.</li>
+                </ul>
+                <a class="text-link" href="https://github.com/Serra-P/Subway-Cuber">
+                  Voir le dépôt GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <figure class="project-media project-media-small">
+                <img
+                  src="./assets/img/projects/video-deinterlace-card.jpg"
+                  alt="Illustration de désentrelacement vidéo"
+                  width="900"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="status status-public">Public</span>
+                  <span>Image / Video</span>
+                </div>
+                <h3>Traitement et compression vidéo</h3>
+                <div class="project-tags">
+                  <span>C++</span><span>YUV/RGB</span><span>Tests</span>
+                </div>
+                <p>
+                  Pipeline C++ autour de la lecture YUV/RGB, conversion, désentrelacement,
+                  options et tests unitaires.
+                </p>
+                <ul>
+                  <li>Manipulation bas niveau de frames et formats d'image.</li>
+                  <li>Rapport LaTeX et tests CMake associés.</li>
+                </ul>
+                <a class="text-link" href="https://github.com/Serra-P/Traitement-et-Compression-Video">
+                  Voir le dépôt GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="status status-private">Code privé</span>
+                  <span>Compilation</span>
+                </div>
+                <h3>Compilateur expérimental inspiré de Tiger</h3>
+                <div class="project-tags">
+                  <span>C++</span><span>AST</span><span>Backend</span><span>Tests</span>
+                </div>
+                <p>
+                  Projet académique de compilation avec AST, passes d'analyse, bibliothèques
+                  utilitaires et infrastructure de tests dans un codebase C++ conséquent.
+                </p>
+                <ul>
+                  <li>Manipulation d'arbres syntaxiques, visiteurs et symboles.</li>
+                  <li>Travail d'extension dans une architecture C++ dense.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted section-anchor" id="labs" aria-labelledby="labs-title">
+        <div class="shell">
+          <div class="section-heading section-heading-wide">
+            <p class="eyebrow">Autres projets / Labs</p>
+            <h2 id="labs-title">Des projets secondaires classés par signal technique.</h2>
+          </div>
+
+          <div class="filter-bar" aria-label="Filtrer les labs">
+            <button class="filter-button is-active" type="button" data-filter="all">Tous</button>
+            <button class="filter-button" type="button" data-filter="graphics">Graphique</button>
+            <button class="filter-button" type="button" data-filter="gpu">GPU</button>
+            <button class="filter-button" type="button" data-filter="data">Data / image</button>
+            <button class="filter-button" type="button" data-filter="systems">Systèmes</button>
+            <button class="filter-button" type="button" data-filter="web">Web</button>
+            <button class="filter-button" type="button" data-filter="languages">Langages</button>
+          </div>
+
+          <div class="labs-grid">
+            <article class="lab-card reveal" data-lab-card data-category="gpu data">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>CUDA</span></div>
+              <h3>Pipeline GPGPU de restauration d'images</h3>
+              <p>Nettoyage GPU avec réduction, scan, histogrammes et variante industrialisée.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="graphics">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>C++ · OpenGL</span></div>
+              <h3>Labyrinthe 3D OpenGL</h3>
+              <p>Génération procédurale de labyrinthe, déplacement joueur et sortie à trouver.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="graphics web">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>TypeScript · WebGL</span></div>
+              <h3>Rendu PBR et IBL</h3>
+              <p>Expérimentations autour du direct lighting, BRDF, tone mapping et image-based lighting.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="graphics">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>C++ · GLSL</span></div>
+              <h3>Scènes OpenGL et shaders</h3>
+              <p>Travaux avec caméra, rendu, objets, shaders, ImGui et organisation CMake.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="graphics systems">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>C++ · Animation</span></div>
+              <h3>Animation 3D</h3>
+              <p>Projet graphique fondé sur une bibliothèque de programmation 3D et des scènes animées.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="data">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>Python · Notebooks</span></div>
+              <h3>Étude longitudinale d'une tumeur</h3>
+              <p>Chargement, pré-traitement et recalage d'images médicales.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="data">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>Python · Optimisation</span></div>
+              <h3>Optimisation de tournées urbaines</h3>
+              <p>Graphes pondérés et recherche de parcours optimaux sur données urbaines.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="data web">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>Python · Docker</span></div>
+              <h3>Pipeline data et dashboard financier</h3>
+              <p>ETL, stockage et visualisation de données de marché avec séparation des services.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="web data">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>Python · Java · TS</span></div>
+              <h3>Application full-stack éco-conception</h3>
+              <p>Projet multi-service avec backend Java, front TypeScript, scripts Python, Docker et tests.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="systems web">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>Go · Docker</span></div>
+              <h3>Microservices Go de commentaires</h3>
+              <p>Deux services Go conteneurisés avec endpoints et configuration runtime.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="languages">
+              <div class="lab-topline"><span class="status status-public">Public</span><span>OCaml</span></div>
+              <h3>Advent of Code 2021</h3>
+              <p>Exercices algorithmiques en OCaml et résolution de problèmes.</p>
+              <a class="text-link" href="https://github.com/Serra-P/Advent_of_code_2021">Dépôt GitHub</a>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="languages">
+              <div class="lab-topline"><span class="status status-public">Public</span><span>Common Lisp</span></div>
+              <h3>Tic-Tac-Toe Lisp</h3>
+              <p>Implémentation simple du morpion en Common Lisp.</p>
+              <a class="text-link" href="https://github.com/Serra-P/tic-tac-toe-lisp">Dépôt GitHub</a>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="data systems">
+              <div class="lab-topline"><span class="status status-private">Code privé</span><span>C++ · Image</span></div>
+              <h3>Travaux de traitement d'images</h3>
+              <p>TPs C++ autour du codage, de l'amélioration et de la mesure de qualité d'images.</p>
+            </article>
+            <article class="lab-card reveal" data-lab-card data-category="systems">
+              <div class="lab-topline"><span class="status status-public">Public</span><span>Emacs Lisp</span></div>
+              <h3>Configuration de développement</h3>
+              <p>Dépôt de configuration et automatisation de l'environnement quotidien.</p>
+              <a class="text-link" href="https://github.com/Serra-P/config">Dépôt GitHub</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-anchor" id="experience" aria-labelledby="experience-title">
+        <div class="shell section-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Parcours</p>
+            <h2 id="experience-title">Expériences issues du CV.</h2>
+          </div>
+
+          <div class="timeline section-content">
+            <article class="timeline-item reveal">
+              <div class="timeline-meta">
+                <span>Mars 2026 - sept. 2026</span>
+                <span>Buc, France</span>
+              </div>
+              <h3>Stagiaire ingénieur R&amp;D, Imaging Fabric</h3>
+              <p class="timeline-company">GE HealthCare · équipe Imagine Fabric</p>
+              <ul>
+                <li>Recherche et prototypage de POCs pour améliorer les interactions d'un viewer de radiologie.</li>
+                <li>Développement transverse : TypeScript/CSS, intégration viewer, pipeline front-back et processeurs C++.</li>
+                <li>Analyse de métriques d'usage pour comparer temps, précision, actions et workflows.</li>
+                <li>Exploration IA/ML, assistance contextuelle, démonstrations et contribution à plusieurs demandes de brevet.</li>
+              </ul>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-meta">
+                <span>Fév. 2025 - fév. 2026</span>
+                <span>Paris, France</span>
+              </div>
+              <h3>Assistant de programmation ACU &amp; YAKA</h3>
+              <p class="timeline-company">EPITA</p>
+              <ul>
+                <li>Encadrement d'étudiants de première année du cycle ingénieur sur C, C++, Java, SQL et JavaScript.</li>
+                <li>Aide technique, revues de code, méthodologie projet, permanences et accompagnement pédagogique.</li>
+              </ul>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-meta">
+                <span>Sept. 2024 - fév. 2025</span>
+                <span>Paris, France</span>
+              </div>
+              <h3>Développeur full stack, stage</h3>
+              <p class="timeline-company">JuneCare</p>
+              <ul>
+                <li>Développement d'une application web de gestion d'assurances intégrée chez des partenaires.</li>
+                <li>Interfaces JavaScript/HTML/CSS, prototypage no-code, conception d'APIs et déploiement AWS.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted section-anchor" id="education" aria-labelledby="education-title">
+        <div class="shell section-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Formation</p>
+            <h2 id="education-title">Formation, langues et engagement.</h2>
+          </div>
+
+          <div class="education-grid section-content">
+            <article class="education-item reveal">
+              <h3>EPITA</h3>
+              <p>École d'ingénieurs en informatique</p>
+              <span>Sept. 2020 - juil. 2026 · spécialisation image, traitement d'image et simulation graphique</span>
+            </article>
+            <article class="education-item reveal">
+              <h3>Ajman University</h3>
+              <p>Semestre international en ingénierie informatique</p>
+              <span>Févr. 2023 - juil. 2023 · Ajman, Émirats arabes unis</span>
+            </article>
+            <article class="education-item reveal">
+              <h3>Langues</h3>
+              <p>Français natif, russe courant, anglais C1</p>
+              <span>Communication technique en contextes français et internationaux</span>
+            </article>
+            <article class="education-item reveal">
+              <h3>Engagement</h3>
+              <p>Prologin / Girls Can Code</p>
+              <span>Transmission et ateliers pédagogiques autour de l'informatique</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section section-anchor" id="contact" aria-labelledby="contact-title">
+        <div class="shell contact-layout">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Échanger autour d'un poste, d'un projet ou d'un sujet image.</h2>
+            <p>
+              Je suis joignable par email, GitHub ou LinkedIn pour échanger sur le développement
+              logiciel, l'imagerie, le rendu, les interactions web ou les projets C++/GPU.
+            </p>
+          </div>
+
+          <div class="contact-actions" aria-label="Liens de contact et CV">
+            <a class="button button-primary" href="mailto:igor.potard@gmail.com">igor.potard@gmail.com</a>
+            <a class="button button-secondary" href="https://github.com/Serra-P">GitHub</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/igor-potard">LinkedIn</a>
+            <a class="button button-ghost" href="./assets/cv/cv_igor_potard_fr.pdf" download>CV français</a>
+            <a class="button button-ghost" href="./assets/cv/cv_igor_potard_en.pdf" download>English resume</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>© <span id="current-year">2026</span> Igor Potard.</p>
+        <a href="#hero">Retour en haut</a>
+      </div>
+    </footer>
+  </body>
+</html>

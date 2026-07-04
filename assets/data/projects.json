@@ -1,0 +1,327 @@
+[
+  {
+    "title": "Générateur de terrain procédural OpenGL",
+    "slug": "procedural-terrain-opengl",
+    "visibility": "public",
+    "category": "Graphics & Rendering",
+    "stack": ["C++", "OpenGL 4.3", "GLSL", "CMake", "ImGui"],
+    "summary": "Terrain généré par compute shader avec bruit fractal, masques géographiques, détails procéduraux et post-processing.",
+    "description": "Projet C++/OpenGL centré sur la génération de terrain procédural : heightmap produite en compute shader, bruit de Perlin/fBm, masques de lacs et montagnes, geometry shaders pour rochers et herbes, puis shader de post-processing.",
+    "highlights": [
+      "Pipeline compute, vertex, geometry, fragment et post-process",
+      "Uniforms ajustables pour expérimenter avec les paramètres de terrain",
+      "Projet visuel public avec assets de démonstration"
+    ],
+    "githubUrl": "https://github.com/Serra-P/Procedural_Generation_OpenGl",
+    "featured": true
+  },
+  {
+    "title": "Infinite Canvas Editor",
+    "slug": "infinite-canvas-editor",
+    "visibility": "public",
+    "category": "Web Tools",
+    "stack": ["TypeScript", "React", "Canvas 2D", "Vite", "Jest"],
+    "summary": "Éditeur visuel web avec pan, zoom, rotation, création d'objets, sélection, animation et tests.",
+    "description": "Application React/TypeScript qui sépare la logique de caméra, de rendu, d'objets et de sélection. Le projet implémente un canvas interactif, des outils clavier/souris et une suite Jest sur les briques principales.",
+    "highlights": [
+      "Navigation pan, zoom, rotation et fit-to-view",
+      "Sélection rectangulaire, animation et suppression des objets",
+      "Tests sur la caméra, la factory d'objets et les utilitaires de sélection"
+    ],
+    "githubUrl": "https://github.com/Serra-P/Infinite_Canvas_Editor",
+    "featured": true
+  },
+  {
+    "title": "Traitement d'images CUDA",
+    "slug": "cuda-image-filtering",
+    "visibility": "public",
+    "category": "GPU / CUDA",
+    "stack": ["CUDA", "C++", "CMake"],
+    "summary": "Filtres image GPU : flou gaussien, NLMeans, flou sélectif et détection de mouvement expérimentale.",
+    "description": "Projet d'apprentissage CUDA appliqué au traitement d'image, avec plusieurs filtres GPU et une organisation CMake permettant d'isoler les kernels et les étapes de calcul.",
+    "highlights": [
+      "Premiers kernels CUDA appliqués à des images",
+      "Traitements de filtrage et lissage",
+      "Base utile pour parler GPGPU et performance mémoire"
+    ],
+    "githubUrl": "https://github.com/Serra-P/cuda_img_filter",
+    "featured": true
+  },
+  {
+    "title": "Raytracer C++",
+    "slug": "raytracer-cpp",
+    "visibility": "public",
+    "category": "Graphics & Rendering",
+    "stack": ["C++", "CMake", "Raytracing"],
+    "summary": "Moteur de rendu hors-ligne avec scène, caméra, lumières, sphères, textures et vecteurs 3D.",
+    "description": "Projet C++ structuré autour des primitives classiques d'un raytracer : caméra, scène, sources lumineuses, objets, sphères, textures, couleurs et vecteurs.",
+    "highlights": [
+      "Modélisation des composants d'un moteur de raytracing",
+      "Architecture C++ simple et lisible",
+      "Projet public utile pour démontrer le rendu hors-ligne"
+    ],
+    "githubUrl": "https://github.com/Serra-P/Raytracer_cpp",
+    "featured": true
+  },
+  {
+    "title": "Simulation de fluides C++",
+    "slug": "fluid-simulation-cpp",
+    "visibility": "public",
+    "category": "Simulation",
+    "stack": ["C++", "CMake", "Simulation", "Raytracing"],
+    "summary": "Simulation de fluides avec grille décalée, particules et pipeline de rendu C++.",
+    "description": "Projet C++ orienté simulation physique, combinant structures numériques, particules, scène, caméra, lumière et briques de rendu.",
+    "highlights": [
+      "Grille décalée et structures de simulation",
+      "Interaction entre moteur de simulation et rendu",
+      "Base cohérente avec une spécialisation image/simulation"
+    ],
+    "githubUrl": "https://github.com/Serra-P/Fluid_Simulation_cpp",
+    "featured": true
+  },
+  {
+    "title": "Subway-Cuber",
+    "slug": "subway-cuber",
+    "visibility": "public",
+    "category": "Graphics & Rendering",
+    "stack": ["C++", "OpenGL", "GLSL", "CGP"],
+    "summary": "Jeu 3D type endless runner avec environnement, obstacles, assets et shaders.",
+    "description": "Projet OpenGL temps réel inspiré d'un endless runner : scènes 3D, assets, shaders, environnement et logique de jeu.",
+    "highlights": [
+      "Rendu temps réel avec assets et shaders dédiés",
+      "Projet visuel démontrable",
+      "Bonne preuve de compétences OpenGL appliquées à un jeu"
+    ],
+    "githubUrl": "https://github.com/Serra-P/Subway-Cuber",
+    "featured": true
+  },
+  {
+    "title": "Traitement et compression vidéo",
+    "slug": "video-processing-cpp",
+    "visibility": "public",
+    "category": "Image / Video",
+    "stack": ["C++", "CMake", "YUV", "Tests"],
+    "summary": "Pipeline C++ de traitement vidéo avec conversion, désentrelacement, lecture d'options et tests.",
+    "description": "Projet C++ sur les formats vidéo et image : frames, conversion RGB/YUV, désentrelacement, player, options et tests CMake.",
+    "highlights": [
+      "Manipulation bas niveau de données image et vidéo",
+      "Rapport LaTeX associé",
+      "Tests unitaires sur les utilitaires"
+    ],
+    "githubUrl": "https://github.com/Serra-P/Traitement-et-Compression-Video",
+    "featured": true
+  },
+  {
+    "title": "Compilateur expérimental inspiré de Tiger",
+    "slug": "private-tiger-compiler",
+    "visibility": "private",
+    "category": "Programming Languages",
+    "stack": ["C++", "AST", "Tests", "Build tooling"],
+    "summary": "Projet académique de compilation dans un codebase C++ conséquent.",
+    "description": "Travail sur un compilateur expérimental : arbres syntaxiques, visiteurs, symboles, bibliothèques utilitaires, passes d'analyse, infrastructure de tests et extension backend. Le code reste privé.",
+    "highlights": [
+      "Compréhension d'une architecture C++ dense",
+      "Manipulation d'AST, visiteurs et symboles",
+      "Travail de compilation et backend sans exposition du code source"
+    ],
+    "featured": true
+  },
+  {
+    "title": "Pipeline GPGPU de restauration d'images",
+    "slug": "private-gpgpu-image-pipeline",
+    "visibility": "private",
+    "category": "GPU / CUDA",
+    "stack": ["CUDA", "C++", "CMake", "Nsight"],
+    "summary": "Pipeline CUDA avec restauration d'images, réduction, scan, histogrammes et version industrialisée.",
+    "description": "Projet académique privé autour de l'optimisation GPU : correction d'images, statistiques, primitives parallèles et comparaison entre kernels faits main et bibliothèques CUDA.",
+    "highlights": [
+      "Réduction, scan, histogramme et pipeline image",
+      "Réflexion performance et analyse avec outils GPU",
+      "Description publique sans lien vers le code privé"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Labyrinthe 3D OpenGL",
+    "slug": "private-opengl-maze",
+    "visibility": "private",
+    "category": "Graphics & Rendering",
+    "stack": ["C++", "OpenGL", "CMake"],
+    "summary": "Jeu d'exploration 3D avec génération procédurale de labyrinthe.",
+    "description": "Projet personnel privé visant à générer et afficher un labyrinthe en 3D avec déplacement du joueur et objectif de sortie.",
+    "highlights": [
+      "Génération procédurale",
+      "Navigation en environnement 3D",
+      "Projet en développement autour d'OpenGL"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Rendu PBR et image-based lighting",
+    "slug": "private-pbr-webgl",
+    "visibility": "private",
+    "category": "Graphics & Rendering",
+    "stack": ["TypeScript", "WebGL", "GLSL"],
+    "summary": "Expérimentations WebGL autour du direct lighting, BRDF, tone mapping et IBL.",
+    "description": "Projet privé de rendu temps réel en TypeScript/WebGL, organisé par étapes de rendu physiquement inspiré.",
+    "highlights": [
+      "Direct lighting et BRDF",
+      "Tone mapping",
+      "Image-based lighting diffuse et spéculaire"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Scènes OpenGL et shaders",
+    "slug": "private-opengl-scenes",
+    "visibility": "private",
+    "category": "Graphics & Rendering",
+    "stack": ["C++", "OpenGL", "GLSL", "ImGui"],
+    "summary": "Travaux OpenGL avec caméra, objets, shaders et organisation CMake.",
+    "description": "Ensemble de projets académiques privés autour de scènes 3D, rendu, caméra, objets et shaders.",
+    "highlights": [
+      "Architecture C++/OpenGL",
+      "Shaders et rendu temps réel",
+      "Expérimentation graphique"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Animation 3D",
+    "slug": "private-3d-animation",
+    "visibility": "private",
+    "category": "Graphics & Rendering",
+    "stack": ["C++", "OpenGL", "GLSL"],
+    "summary": "Projet graphique C++ autour de scènes animées et programmation 3D.",
+    "description": "Projet privé basé sur une bibliothèque de programmation graphique, orienté scène, animation et rendu 3D.",
+    "highlights": [
+      "Programmation graphique C++",
+      "Scènes et animation",
+      "Utilisation d'une librairie 3D existante"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Étude longitudinale d'une tumeur",
+    "slug": "private-medical-imaging-vitk",
+    "visibility": "private",
+    "category": "Data / Imaging",
+    "stack": ["Python", "Jupyter Notebook", "Image processing"],
+    "summary": "Mini-projet d'imagerie médicale avec chargement, pré-traitement et recalage d'images.",
+    "description": "Projet privé d'analyse d'images médicales, cohérent avec l'orientation image et santé du CV.",
+    "highlights": [
+      "Pré-traitement d'images",
+      "Recalage rigide",
+      "Notebook reproductible"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Optimisation de tournées urbaines",
+    "slug": "private-urban-routing",
+    "visibility": "private",
+    "category": "Data / Optimization",
+    "stack": ["Python", "Jupyter Notebook", "Graph algorithms"],
+    "summary": "Modélisation de graphes pondérés et recherche de parcours optimaux sur données urbaines.",
+    "description": "Projet académique privé autour de l'optimisation de parcours, du graphe pondéré et de la visualisation d'itinéraires.",
+    "highlights": [
+      "Construction de graphe",
+      "Optimisation de parcours",
+      "Notebook et scripts Python"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Pipeline data et dashboard financier",
+    "slug": "private-financial-data-dashboard",
+    "visibility": "private",
+    "category": "Data / Web",
+    "stack": ["Python", "Docker", "JavaScript", "CSS"],
+    "summary": "ETL, stockage et visualisation de données de marché avec séparation des services.",
+    "description": "Projet privé de pipeline data avec conteneurs, extraction/transformation et interface de visualisation.",
+    "highlights": [
+      "Architecture par services",
+      "ETL Python",
+      "Dashboard web"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Application full-stack éco-conception",
+    "slug": "private-eco-fullstack",
+    "visibility": "private",
+    "category": "Web Tools",
+    "stack": ["Python", "Java", "TypeScript", "Docker", "Quarkus"],
+    "summary": "Projet multi-service avec backend Java, front TypeScript, scripts Python, Docker et tests.",
+    "description": "Projet privé combinant plusieurs couches applicatives : services Python, backend Java, front TypeScript et workflows de qualité.",
+    "highlights": [
+      "Architecture multi-service",
+      "Tests Python",
+      "Outillage Docker et frontend Vite"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Microservices Go de commentaires",
+    "slug": "private-go-comments-microservices",
+    "visibility": "private",
+    "category": "Systems / Backend",
+    "stack": ["Go", "Docker", "HTTP APIs"],
+    "summary": "Deux services Go conteneurisés communiquant via endpoints configurables.",
+    "description": "Projet privé d'architecture backend légère en Go, avec services isolés et configuration par variables d'environnement.",
+    "highlights": [
+      "Services Go séparés",
+      "Conteneurisation Docker",
+      "Configuration runtime explicite"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Advent of Code 2021",
+    "slug": "advent-of-code-2021",
+    "visibility": "public",
+    "category": "Programming Languages",
+    "stack": ["OCaml", "Algorithms"],
+    "summary": "Exercices algorithmiques en OCaml.",
+    "description": "Projet public utile pour montrer un goût pour la résolution de problèmes et la programmation fonctionnelle.",
+    "highlights": [
+      "OCaml",
+      "Algorithmique",
+      "Exercices courts et ciblés"
+    ],
+    "githubUrl": "https://github.com/Serra-P/Advent_of_code_2021",
+    "featured": false
+  },
+  {
+    "title": "Tic-Tac-Toe Lisp",
+    "slug": "tic-tac-toe-lisp",
+    "visibility": "public",
+    "category": "Programming Languages",
+    "stack": ["Common Lisp"],
+    "summary": "Implémentation simple du morpion en Common Lisp.",
+    "description": "Projet public compact avec logique de jeu, alternance des tours et affichage plateau.",
+    "highlights": [
+      "Common Lisp",
+      "Logique de jeu",
+      "Projet d'apprentissage lisible"
+    ],
+    "githubUrl": "https://github.com/Serra-P/tic-tac-toe-lisp",
+    "featured": false
+  },
+  {
+    "title": "Configuration de développement",
+    "slug": "development-config",
+    "visibility": "public",
+    "category": "Tools",
+    "stack": ["Emacs Lisp", "Git"],
+    "summary": "Dépôt de configuration et environnement de travail.",
+    "description": "Projet public secondaire qui documente l'environnement de développement et l'automatisation quotidienne.",
+    "highlights": [
+      "Configuration éditeur",
+      "Organisation de l'environnement",
+      "Projet public lié depuis les labs"
+    ],
+    "githubUrl": "https://github.com/Serra-P/config",
+    "featured": false
+  }
+]

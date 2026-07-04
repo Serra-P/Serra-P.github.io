@@ -40,27 +40,29 @@
   const labCards = Array.from(document.querySelectorAll("[data-lab-card]"));
 
   if (filterButtons.length > 0 && labCards.length > 0) {
+    const applyLabFilter = (selectedButton) => {
+      const filter = selectedButton.dataset.filter || "all";
+
+      filterButtons.forEach((item) => {
+        const isActive = item === selectedButton;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+      });
+
+      labCards.forEach((card) => {
+        const categories = (card.dataset.category || "").split(/\s+/);
+        const isVisible = filter === "all" || categories.includes(filter);
+        card.classList.toggle("is-filtered-out", !isVisible);
+      });
+    };
+
     filterButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        const filter = button.dataset.filter || "all";
-
-        filterButtons.forEach((item) => {
-          const isActive = item === button;
-          item.classList.toggle("is-active", isActive);
-          item.setAttribute("aria-pressed", String(isActive));
-        });
-
-        labCards.forEach((card) => {
-          const categories = (card.dataset.category || "").split(/\s+/);
-          const isVisible = filter === "all" || categories.includes(filter);
-          card.classList.toggle("is-filtered-out", !isVisible);
-        });
+        applyLabFilter(button);
       });
     });
 
-    filterButtons.forEach((button) => {
-      button.setAttribute("aria-pressed", String(button.classList.contains("is-active")));
-    });
+    applyLabFilter(filterButtons.find((button) => button.classList.contains("is-active")) || filterButtons[0]);
   }
 
   if ("IntersectionObserver" in window) {

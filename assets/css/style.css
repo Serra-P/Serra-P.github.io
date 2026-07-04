@@ -641,7 +641,14 @@ h3 {
 }
 
 .section-heading-wide h2 {
-  max-width: 14ch;
+  max-width: 20ch;
+}
+
+.section-lead {
+  max-width: 72ch;
+  margin-top: 0.9rem;
+  color: var(--text-soft);
+  font-size: clamp(1rem, 1.4vw, 1.08rem);
 }
 
 .section-content {
@@ -666,7 +673,16 @@ h3 {
   font-size: clamp(1.06rem, 1.7vw, 1.24rem);
 }
 
+.proof-strip {
+  --space-section: clamp(2.8rem, 5vw, 4.2rem);
+}
+
+.proof-heading {
+  margin-bottom: 1.2rem;
+}
+
 .focus-grid,
+.proof-grid,
 .skills-grid,
 .projects-grid,
 .labs-grid,
@@ -677,6 +693,10 @@ h3 {
 
 .focus-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.proof-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .skills-grid {
@@ -697,6 +717,7 @@ h3 {
 
 .card,
 .mini-card,
+.proof-card,
 .project-card,
 .lab-card,
 .timeline-item,
@@ -712,6 +733,7 @@ h3 {
 
 .card,
 .mini-card,
+.proof-card,
 .project-card,
 .lab-card,
 .timeline-item,
@@ -721,6 +743,7 @@ h3 {
 
 .card,
 .mini-card,
+.proof-card,
 .lab-card,
 .education-item {
   display: grid;
@@ -730,10 +753,19 @@ h3 {
 
 .card p,
 .mini-card p,
+.proof-card p,
 .lab-card p,
 .education-item p,
 .project-card p {
   font-size: 0.96rem;
+}
+
+.proof-card span {
+  color: var(--accent-warm);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .mini-card span {
@@ -922,7 +954,7 @@ h3 {
 }
 
 .contact-layout h2 {
-  max-width: 13ch;
+  max-width: 20ch;
 }
 
 .contact-layout p {
@@ -1014,6 +1046,7 @@ h3 {
   }
 
   .focus-grid,
+  .proof-grid,
   .skills-grid,
   .education-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1104,6 +1137,7 @@ h3 {
 
   .profile-facts,
   .focus-grid,
+  .proof-grid,
   .skills-grid,
   .projects-grid,
   .labs-grid,
@@ -1148,6 +1182,7 @@ h3 {
 
   .card,
   .mini-card,
+  .proof-card,
   .project-card,
   .lab-card,
   .timeline-item,
